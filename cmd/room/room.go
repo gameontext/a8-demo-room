@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/elevran/chatter/pkg/gameon"
+	"github.com/gameontext/a8-room/pkg/gameon"
 )
 
 var exits = map[string]string{

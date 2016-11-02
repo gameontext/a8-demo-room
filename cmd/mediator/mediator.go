@@ -12,7 +12,7 @@ import (
 	"strings"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/elevran/chatter/pkg/gameon"
+	"github.com/gameontext/a8-room/pkg/gameon"
 	"github.com/gorilla/websocket"
 )
 
