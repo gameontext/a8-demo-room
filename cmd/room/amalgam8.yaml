@@ -1,0 +1,17 @@
+service:
+  name: room
+  
+registry:
+    url: http://registry:8080
+controller:
+    url: http://controller:8080
+      
+register: true
+endpoint:
+  port: 80
+  type: http
+  
+proxy: true
+
+supervise: true
+app: [ "/opt/chatter/room" ]

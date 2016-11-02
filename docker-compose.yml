@@ -1,0 +1,48 @@
+version: '2'
+
+services:
+
+    #######################
+    # Amalgam8 controlplane
+    #
+    registry:
+        image: amalgam8/a8-registry
+        ports:
+            - "8001:8080"
+        environment:
+            - A8_STORE=redis
+            - A8_STORE_ADDRESS=redis:6379
+        links:
+            - redis
+
+    controller:
+        image: amalgam8/a8-controller
+        ports:
+            - "8002:8080"
+        environment:
+            - A8_DATABASE_TYPE=redis
+            - A8_DATABASE_HOST=redis://redis:6379
+        links:
+            - redis
+
+    redis:
+        image: redis:alpine
+    
+    ######################
+    # Chatter app services
+    #
+    mediator:
+        image: gameon-chatter/mediator:latest
+        ports:
+            - "3000:3000"
+        links:
+            - registry
+            - controller
+                
+    room:
+        image: gameon-chatter/room:latest
+        links:
+            - registry
+            - controller
+
+    

@@ -1,0 +1,12 @@
+service:
+  name: mediator
+
+registry:
+    url: http://registry:8080
+controller:
+    url: http://controller:8080
+      
+proxy: true
+
+supervise: true
+app: [ "/opt/chatter/mediator" ]
