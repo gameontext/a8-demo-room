@@ -29,10 +29,10 @@ services:
         image: redis:alpine
     
     ######################
-    # Chatter app services
+    # A8 room services
     #
     mediator:
-        image: gameon-chatter/mediator:latest
+        image: gameon-a8-room/mediator:latest
         ports:
             - "3000:3000"
         links:
@@ -40,7 +40,7 @@ services:
             - controller
                 
     room:
-        image: gameon-chatter/room:latest
+        image: gameon-a8-room/room:latest
         links:
             - registry
             - controller

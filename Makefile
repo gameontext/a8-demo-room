@@ -6,15 +6,15 @@ build:
 
 dockerize:
 	@echo "Building 'room' docker image..."
-	@docker build -t gameon-chatter/room:latest cmd/room
+	@docker build -t gameon-a8-room/room:latest cmd/room
 	@echo "Building 'mediator' docker image..."
-	@docker build -t gameon-chatter/mediator:latest cmd/mediator
+	@docker build -t gameon-a8-room/mediator:latest cmd/mediator
 
 start:
-	@echo "Starting chatter application..."
+	@echo "Starting a8-room application..."
 	@docker-compose up -d
 	
 stop:
-	@echo "Stopping chatter application..."
+	@echo "Stopping a8-room application..."
 	@docker-compose stop 
 	@docker-compose rm -f
