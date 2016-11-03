@@ -7,6 +7,29 @@ import (
 	"strings"
 )
 
+////////////////////////////////////////////////////////////////////
+//        .-"-.            .-"-.            .-"-.           .-"-.
+//      _/_-.-_\_        _/.-.-.\_        _/.-.-.\_       _/.-.-.\_
+//     / __} {__ \      /|( o o )|\      ( ( o o ) )     ( ( o o ) )
+//    / //  "  \\ \    | //  "  \\ |      |/  "  \|       |/  "  \|
+//   / / \'---'/ \ \  / / \'---'/ \ \      \'/^\'/         \ .-. /
+//   \ \_/`"""`\_/ /  \ \_/`"""`\_/ /      /`\ /`\         /`"""`\
+//    \           /    \           /      /  /|\  \       /       \
+////////////////////////////////////////////////////////////////////
+
+var profanities = []string{
+	"boogers",
+	"snot",
+	"poop",
+	"shucks",
+	"argh",
+	"dang",
+	"boob",
+	"crap",
+	"woo",
+	"merde",
+}
+
 type ProfanityChecker interface {
 	// Check if the provided content contains any profanities.
 	Check(content string) bool
@@ -40,11 +63,13 @@ type regexProfanityChecker struct {
 }
 
 func newRegexProfanityChecker() *regexProfanityChecker {
+	regex := fmt.Sprintf("(%s)", strings.Join(profanities, "|"))
 	return &regexProfanityChecker{
-		re: regexp.MustCompile("(boogers|snot|poop|shucks|argh)"),
+		re: regexp.MustCompile(regex),
 	}
 }
 
 func (c *regexProfanityChecker) Check(content string) bool {
-	return c.re.MatchString(content)
+	lowercased := strings.ToLower(content)
+	return c.re.MatchString(lowercased)
 }
