@@ -44,5 +44,6 @@ services:
         links:
             - registry
             - controller
-
-    
+        environment:
+            - VERSION=v1
+            - A8_SERVICE=room:v1
