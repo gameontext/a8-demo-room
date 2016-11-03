@@ -1,5 +1,5 @@
 # Amalgam8 Room for Game On!
-![Game On! Logo](https://avatars3.githubusercontent.com/u/15149525?v=3&s=200) ![Plus](http://downloadicons.net/sites/default/files/green-plus-sign-icon-50923.png) ![Amalgam8 Logo](https://avatars2.githubusercontent.com/u/19418902?v=3&s=200)  
+![Game On! Logo](https://avatars3.githubusercontent.com/u/15149525?v=3&s=200) ![Amalgam8 Logo](https://avatars2.githubusercontent.com/u/19418902?v=3&s=200)  
 
 ## What is Game On!?
 
