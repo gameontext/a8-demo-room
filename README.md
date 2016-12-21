@@ -33,22 +33,14 @@ To build and run *Amalgam8 Room*, you'll need *Go* 1.6+, *docker* 1.10+, *docker
 
 ## Run the room locally
 
-1. Obtain the source of this repository
-   ```shell
-   go get github.com/gameontext/a8-room
-   ```
-2. Navigate to the Amalgam8 Room root directory
-   ```shell
-   cd $GOPATH/src/github.com/gameontext/a8-room
-   ```
-3. Build the game binaries and docker images.
-   ```shell
-   make build dockerize
-   ```
-4. Run the room
-   ```shell
-   make start
-   ```
+1. Obtain the source of this repository:  
+  `go get github.com/gameontext/a8-roo`
+2. Navigate to the Amalgam8 Room root directory:  
+ `cd $GOPATH/src/github.com/gameontext/a8-room`
+3. Build the game binaries and docker images:  
+  `make build dockerize`
+4. Run the room:  
+  `make start`
 
 You can use `docker ps` to verify that the room's containers are running. Expect to see Amalgam8's controlplane services (*a8room_controller*, *a8room_registry* and *a8room_redis*), as well as the room's own *a8room_room* and *a8room_mediator* microservices.
 
