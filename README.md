@@ -5,7 +5,7 @@
 
 *Game On!* is a text-based adventure game built to explore and demonstrate microservices architecture and related concepts.
 The game is extensible by allowing custom game rooms to be added to it.  
-You can learn more about *Game On!* by visiting its [official website](https://game-on.org).
+You can learn more about *Game On!* by visiting its [official website](https://gameontext.org).
 
 ## What is Amalgam8?
 
@@ -48,7 +48,7 @@ You can use `docker ps` to verify that the room's containers are running. Expect
 
 1. Enter the Game On! website with your web browser:
    - If you're [running Game On! locally](https://github.com/gameontext/gameon#local-room-development), the website is available at http://127.0.0.1.  
-   - You can also use the [hosted version](https://game-on.org) of the game, but you'll have to make sure your room service is publicly reachable (e.g., by deploying it to [Bluemix](https://console.ng.bluemix.net/)).
+   - You can also use the [hosted version](https://gameontext.org) of the game, but you'll have to make sure your room service is publicly reachable (e.g., by deploying it to [Bluemix](https://console.ng.bluemix.net/)).
 
 2. Login to the game. If you're running Game On! locally, you can only login as an anonymous user.
 
